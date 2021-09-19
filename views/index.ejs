@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Countries</title>
+</head>
+
+<body>
+    <h1>Countries</h1>
+    <form action="/data" method="POST">
+        Select Country:
+        <select name="country">
+            <option value="estonia">Estonia</option>
+            <option value="latvia">Latvia</option>
+            <option value="lithuania">Lithuania</option>
+        </select>
+        <button type="submit">Show Country Data</button>
+
+    </form>
+    <p>Name: <%= countryData.countryName %></p>
+    <p>Top Level Domain: <%= countryData.countryDomain %></p>
+    <p>Calling Code: <%= countryData.countryCode %></p>
+    <p>Capital: <%= countryData.countryCapital %></p>
+    <p>Region: <%= countryData.countryRegion %></p>
+    <p>Subregion: <%= countryData.countrySubRegion %></p>
+    <p>Population: <%= countryData.countryPopulation %></p>
+    <p>Timezone: <%= countryData.countryTimezone %></p>
+    <p>Language: <%= countryData.countryLanguage %></p>
+    <p>Currency: <%= countryData.countryCurrency %></p>
+    <p>Flag: <%= countryData.countryFlag %></p>
+</body>
+
+</html>
