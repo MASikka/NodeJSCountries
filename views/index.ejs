@@ -17,21 +17,21 @@
             <option value="estonia">Estonia</option>
             <option value="latvia">Latvia</option>
             <option value="lithuania">Lithuania</option>
-        </select>
+        </select><br>
         <button type="submit">Show Country Data</button>
 
-    </form>
-    <p>Name: <%= countryData.countryName %></p>
-    <p>Top Level Domain: <%= countryData.countryDomain %></p>
-    <p>Calling Code: <%= countryData.countryCode %></p>
-    <p>Capital: <%= countryData.countryCapital %></p>
-    <p>Region: <%= countryData.countryRegion %></p>
-    <p>Subregion: <%= countryData.countrySubRegion %></p>
-    <p>Population: <%= countryData.countryPopulation %></p>
-    <p>Timezone: <%= countryData.countryTimezone %></p>
-    <p>Language: <%= countryData.countryLanguage %></p>
-    <p>Currency: <%= countryData.countryCurrency %></p>
-    <p>Flag: <%= countryData.countryFlag %></p>
+    </form><div>
+    <p>Name: <b><%= countryData.countryName %></b></p>
+    <p>Top Level Domain: <b><%= countryData.countryDomain %></b></p>
+    <p>Calling Code: <b><%= countryData.countryCode %></b></p>
+    <p>Capital: <b><%= countryData.countryCapital %></b></p>
+    <p>Region: <b><%= countryData.countryRegion %></b></p>
+    <p>Subregion: <b><%= countryData.countrySubRegion %></b></p>
+    <p>Population: <b><%= countryData.countryPopulation %></b></p>
+    <p>Timezone: <b><%= countryData.countryTimezone %></b></p>
+    <p>Language: <b><%= countryData.countryLanguage %></b></p>
+    <p>Currency: <b><%= countryData.countryCurrency %></b></p>
+    <p><img src= <%= countryData.countryFlag %>></p></div>
 </body>
 
 </html>

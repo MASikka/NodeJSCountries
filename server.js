@@ -35,10 +35,18 @@ app.post('/data', (req, res) => {
 
             };
 
-            //countryInfo.countryName = response.data.name;
-            //console.log(countryInfo.countryName);
-            console.log(response.data);
-            console.log(response.data.name);
+            countryInfo.countryName = response.data[0].name;
+            countryInfo.countryDomain = response.data[0].topLevelDomain;
+            countryInfo.countryCode = response.data[0].callingCodes;
+            countryInfo.countryCapital = response.data[0].capital;
+            countryInfo.countryRegion = response.data[0].region;
+            countryInfo.countrySubRegion = response.data[0].subregion;
+            countryInfo.countryPopulation = response.data[0].population;
+            countryInfo.countryTimezone = response.data[0].timezones;
+            countryInfo.countryLanguage = response.data[0].languages[0].name;
+            countryInfo.countryCurrency = response.data[0].currencies[0].code +' '+ response.data[0].currencies[0].name +' '+ response.data[0].currencies[0].symbol;
+            countryInfo.countryFlag = response.data[0].flag;
+
             res.render('index.ejs', { countryData: countryInfo });
         })
         .catch((error) => {

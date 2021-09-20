@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body{
+    background-color: rgb(70, 73, 75);
+    color: white;
+}
+div{
+    width: 300px;
+    margin: auto;
+    text-align: left;
+}
+h1{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+p,form{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: large;
+}
+form{
+    text-align: center;
+}
+img{
+    width: 200px;
+}
