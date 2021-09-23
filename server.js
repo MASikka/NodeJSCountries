@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.post('/data', (req, res) => {
     let userCountry = req.body.country;
-    let url = "https://restcountries.eu/rest/v2/name/" + userCountry + "?fullText=true";
+    let url = "https://restcountries.com/v2/name/" + userCountry + "?fullText=true";
 
     axios.get(url)
         .then((response) => {
@@ -39,13 +39,13 @@ app.post('/data', (req, res) => {
             countryInfo.countryDomain = response.data[0].topLevelDomain;
             countryInfo.countryCode = response.data[0].callingCodes;
             countryInfo.countryCapital = response.data[0].capital;
-            countryInfo.countryRegion = response.data[0].region;
-            countryInfo.countrySubRegion = response.data[0].subregion;
+            countryInfo.countryRegion = response.data[0].continent;
+            countryInfo.countrySubRegion = response.data[0].region;
             countryInfo.countryPopulation = response.data[0].population;
             countryInfo.countryTimezone = response.data[0].timezones;
             countryInfo.countryLanguage = response.data[0].languages[0].name;
             countryInfo.countryCurrency = response.data[0].currencies[0].code +' '+ response.data[0].currencies[0].name +' '+ response.data[0].currencies[0].symbol;
-            countryInfo.countryFlag = response.data[0].flag;
+            countryInfo.countryFlag = response.data[0].flags[0];
 
             res.render('index.ejs', { countryData: countryInfo });
         })
